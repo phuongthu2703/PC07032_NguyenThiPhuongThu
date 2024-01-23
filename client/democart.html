@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
+</head>
+<body>
+<style>
+    /* CSS cho icon giỏ hàng */
+.cart-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #333;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* CSS cho popup giỏ hàng */
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cart-content {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.cart-total {
+    text-align: right;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Thêm hiệu ứng fade-in cho popup */
+.cart-popup.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+</style>
+    <!-- Giỏ hàng nhỏ -->
+    <div class="cart-container" onclick="toggleCart()">
+        <div class="cart-icon">&#128722;</div>
+        <div class="cart-badge">3</div>
+
+        <!-- Popup giỏ hàng -->
+        <div class="cart-popup" id="cartPopup">
+            <div class="cart-content" id="cartContent">
+                <!-- Nội dung giỏ hàng sẽ được thêm vào đây -->
+                <p>Product 1</p>
+                <p>Product 2</p>
+                <p>Product 3</p>
+            </div>
+            <div class="cart-total">
+                <p><strong>Total:</strong> $50.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội dung trang web -->
+    <div>
+        <h1>Welcome to Your Website</h1>
+        <!-- Các phần khác của trang web của bạn -->
+    </div>
+
+    <script>
+        function toggleCart() {
+    var cartPopup = document.getElementById('cartPopup');
+    cartPopup.classList.toggle('active');
+}
+
+// Thêm sự kiện để đóng popup khi click bên ngoài nó
+document.addEventListener('click', function(event) {
+    var cartPopup = document.getElementById('cartPopup');
+    var cartContainer = document.querySelector('.cart-container');
+
+    if (!cartContainer.contains(event.target) && !cartPopup.contains(event.target)) {
+        cartPopup.classList.remove('active');
+    }
+});
+
+    </script>
+
+</body>
+</html>

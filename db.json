@@ -1,0 +1,105 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Cupcake"   
+        },
+        {
+            "id": 2,
+            "name": "Donut"   
+        },
+        {
+            "id": 3,
+            "name": "Tiramisu"   
+        },
+        {
+            "id": 4,
+            "name": "Fruitcake"   
+        }
+
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Vanilla Cupcake",
+        "image": "img/VanillaCupcakes.jpg",
+        "price": 2.5,
+        "description": "Cupcake là một trong những loại bánh nhỏ và dễ thương nhất thường được làm từ một loại bột ngọt nhẹ và được ăn kèm với lớp kem tươi mềm mại hoặc đủ ngon để ăn mà không cần kem.",
+        "category_id": 1
+      },
+      {
+        "id": 2,
+        "name": "Chocolate Cupcake",
+        "image": "img/ChocolateCupcakes.jpg",
+        "price": 3.0,
+        "description": "Cupcake là một trong những loại bánh nhỏ và dễ thương nhất thường được làm từ một loại bột ngọt nhẹ và được ăn kèm với lớp kem tươi mềm mại hoặc đủ ngon để ăn mà không cần kem.",
+        "category_id": 1
+      },
+      {
+        "id": 3,
+        "name": "Chocolate Donut",
+        "image": "img/ChocolateDonut.jpg",
+        "price": 2.8,
+        "description": "Cupcake là một trong những loại bánh nhỏ và dễ thương nhất thường được làm từ một loại bột ngọt nhẹ và được ăn kèm với lớp kem tươi mềm mại hoặc đủ ngon để ăn mà không cần kem.",
+        "category_id": 2
+      },
+      {
+        "id": 4,
+        "name": "Strawberry",
+        "image": "img/Strawberry.jpg",
+        "price": 2.8,
+        "description": "Cupcake là một trong những loại bánh nhỏ và dễ thương nhất thường được làm từ một loại bột ngọt nhẹ và được ăn kèm với lớp kem tươi mềm mại hoặc đủ ngon để ăn mà không cần kem.",
+        "category_id": 2
+      }
+    ],
+    "order": [
+      {
+        "id": 1,
+        "customer_name": "Minmin",
+        "customer_address":" 123fpt",
+        "customer_email":"minminpc07032@fpt.edu.vn ",
+        "customer_phone_number":"0768021704",
+        "created_date" :" 1/20/2024",
+        "status": "giao hàng"
+      },
+      {
+        "id": 2,
+        "customer_name": "Meme",
+        "customer_address":"333fpt",
+        "customer_email":"memepc07032@fpt.edu.vn ",
+        "customer_phone_number":"0768021705",
+        "created_date" :" 1/20/2022",
+        "status": "giao hàng"
+      },
+      {
+        "id": 3,
+        "customer_name": "Mimi",
+        "customer_address":" 222fpt",
+        "customer_email":"mimipc07032@fpt.edu.vn ",
+        "customer_phone_number":"0768021706",
+        "created_date" :" 1/20/2022",
+        "status": "giao hàng"
+      }
+    ],
+    "oder_details": [
+        {
+            "order_id": 1,
+             "product_id": 1,
+             "quantity": 1,
+             "unit_price": 5.6
+        },
+        {
+            "order_id": 2,
+             "product_id": 2,
+             "quantity": 2,
+             "unit_price": 7.1
+        },
+        {
+            "order_id": 3,
+             "product_id": 3,
+             "quantity": 3,
+             "unit_price": 8.5
+        }
+      ]
+  }
+  
